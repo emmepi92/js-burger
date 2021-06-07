@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Create Your Burger</h1>
+    </header>
+
+    <main>
+        <form>
+            <input id="burger-name" type="text" placeholder="Name your Burger">
+        </form>
+
+        <h3>Ingredients</h3>
+
+        <form>
+            <input type="checkbox" id="add-cheese" class="add-ingredients"  value="5">
+            <label for="add-cheese">Cheese</label>
+
+            <input type="checkbox" id="add-egg" class="add-ingredients"  value="5">
+            <label for="add-egg">Egg</label>
+
+            <input type="checkbox" id="add-mustard" class="add-ingredients"  value="2">
+            <label for="add-mustard">Mustard</label>
+
+            <input type="checkbox" id="add-tomato" class="add-ingredients"  value="3">
+            <label for="add-tomato">Tomato</label>
+
+            <input type="checkbox" id="add-lattuce" class="add-ingredients"  value="3">
+            <label for="add-lattuce">Lattuce</label>
+
+            <input type="checkbox" id="add-ketchup" class="add-ingredients"  value="2">
+            <label for="add-ketchup">Ketchup</label>
+        </form>
+
+        <form>
+            <label for="discount">Yuor coupon</label>
+            <input id="discount" type="text">
+        </form>
+
+        <button id="calculate-sum" >Calculate</button>
+    </main>
+
+    <footer>
+        <div>
+            <span>Your price</span>
+            <span id="sum-burger"></span>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
