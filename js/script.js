@@ -11,7 +11,7 @@ calculateSumButton.addEventListener('click', function () {
     textSumOutput.innerHTML = '&nbsp;for ' + nameBurger.value;
     nameBurger.style.fontWeight = 'bold';
     nameBurger.style.fontSize = '25px';
-    } else {   // for reset, after first click and empty input
+    } else {   // for reset, after first click and then empty input
         textSumOutput.innerHTML = '';
         nameBurger.style.fontWeight = '400';
         nameBurger.style.fontSize = '15px';
@@ -58,7 +58,7 @@ calculateSumButton.addEventListener('click', function () {
 
     if (calcolateDiscount.value.length > 0 && flagDiscount === false) {
         alert("Invalid coupon");
-        calcolateDiscount.value = '';
+        calcolateDiscount.value = ''; // reset on click only if the coupon is invalid
     }
     
     resultSum *= discount;
