@@ -11,8 +11,10 @@ calculateSumButton.addEventListener('click', function () {
     textSumOutput.innerHTML = '&nbsp;for ' + nameBurger.value;
     nameBurger.style.fontWeight = 'bold';
     nameBurger.style.fontSize = '25px';
-    } else {   // for reset
+    } else {   // for reset, after first click and empty input
         textSumOutput.innerHTML = '';
+        nameBurger.style.fontWeight = '400';
+        nameBurger.style.fontSize = '15px';
     }
     
     var sumOutputHtml = document.getElementById("sum-burger");
@@ -55,14 +57,14 @@ calculateSumButton.addEventListener('click', function () {
     }
 
     if (calcolateDiscount.value.length > 0 && flagDiscount === false) {
-        alert("Invalid coupon")
+        alert("Invalid coupon");
+        calcolateDiscount.value = '';
     }
     
     resultSum *= discount;
 
     sumOutputHtml.innerHTML = ' $ ' +  resultSum.toFixed(2);
 
-    calcolateDiscount.value = ''; //reset
 
     /*----------------------------------------------------
     calcolate the discount for the burger OLD VERSION
