@@ -1,15 +1,16 @@
+// discount firstorder & secondorder 
 var calculateSumButton = document.getElementById("calculate-sum");
-
 
 calculateSumButton.addEventListener('click', function () {
     
-    // set the name for the burger 
-    var burgerNameOutput = document.getElementById("burger-name");
-    var burgerName = burgerNameOutput.value;
-    burgerNameOutput.innerHTML = burgerName;
+    // set the name for the burger, if the user sets the name 
+    var nameBurger = document.getElementById("burger-name");
+    if (nameBurger.value!=='') {
+    document.getElementById("text-sum").innerHTML = '&nbsp;for ' + nameBurger.value;
+    }
     
     var sumOutputHtml = document.getElementById("sum-burger");
-    var resultSum = 0;    
+    var resultSum = 50;    
     var checkIngretients = document.getElementsByClassName("add-ingredients");
     var firstOrder = 'firstorder';
     var secondOrder = 'secondorder';
@@ -33,7 +34,7 @@ calculateSumButton.addEventListener('click', function () {
         resultSum *= 0.8;
     }
 
-    sumOutputHtml.innerHTML = ' $ ' +  resultSum;
+    sumOutputHtml.innerHTML = ' $ ' +  resultSum.toFixed(2);
 });
 
 

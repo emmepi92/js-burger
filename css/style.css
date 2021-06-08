@@ -1,0 +1,83 @@
+.bg-orange {
+    background-color: rgb(253, 187, 64);
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    
+}
+
+.bg-orange img {
+    position: absolute;
+    width: 200px;
+    right: -100px;
+    top: -10px;
+}
+
+.burger-name {
+    padding: 30px;
+}
+input {
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+
+.ingredients,
+section.discount-container {
+    padding: 30px; 
+}
+.ingredients svg {
+    width: 50px;
+}
+.ingredients .space {
+    margin-top: 20px ;
+}
+.ingredients span {
+    font-weight: 600;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ingredients label {
+    color: rgb(250, 94, 124);
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+input#discount {
+    background-color: rgb(255, 245, 226);
+    width: 100%;
+    margin-top: 8px;  /* useful for xs devices  */
+}
+
+#calculate-sum {
+    display: inline-block;
+    background-color: rgb(253, 187, 64);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+#calculate-sum:hover {
+    cursor: pointer;
+}
+
+footer .bg-rose {
+    background-color: rgb(250, 94, 124);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.bg-rose div:first-child {
+    margin-left: 30px;
+}
+
+@media screen and (min-width: 576px) {
+    input#discount {
+        width: 70%;
+    }
+}
