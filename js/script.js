@@ -5,16 +5,25 @@ calculateSumButton.addEventListener('click', function () {
     
     // set the name for the burger, if the user sets the name 
     var nameBurger = document.getElementById("burger-name");
+    var textSumOutput = document.getElementById("text-sum");
+
+
     if (nameBurger.value!=='') {
-    document.getElementById("text-sum").innerHTML = '&nbsp;for ' + nameBurger.value;
+    textSumOutput.innerHTML = '&nbsp;for ' + nameBurger.value;
+    nameBurger.style.fontWeight = 'bold';
+    } else {   // for reset if the user put the name and then delete it
+        textSumOutput.innerHTML = '';
     }
     
     var sumOutputHtml = document.getElementById("sum-burger");
-    var resultSum = 50;    
     var checkIngretients = document.getElementsByClassName("add-ingredients");
-    var firstOrder = 'firstorder';
-    var secondOrder = 'secondorder';
     var calcolateDiscount = document.getElementById("discount");
+
+    var resultSum = 50;   // seems that the burger's base price start from $ 50, plus addeds
+    var firstOrder = 'firstorder';
+    var firstOrderValue = 0.5;
+    var secondOrder = 'secondorder';
+    var secondOrderValure = 0.8;
     
     
     // calcolate the price for the burger 
@@ -28,10 +37,10 @@ calculateSumButton.addEventListener('click', function () {
 
     // calcolate the discount for the burger 
     if (calcolateDiscount.value === firstOrder) {
-        resultSum *= 0.5;
+        resultSum *= firstOrderValue;
     }
     else if (calcolateDiscount.value === secondOrder) {
-        resultSum *= 0.8;
+        resultSum *= secondOrderValure;
     }
 
     sumOutputHtml.innerHTML = ' $ ' +  resultSum.toFixed(2);
