@@ -68,7 +68,7 @@ footer .bg-rose {
     padding-top: 30px;
     padding-bottom: 30px;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -79,5 +79,8 @@ footer .bg-rose {
 @media screen and (min-width: 576px) {
     input#discount {
         width: 70%;
+    }
+    footer .bg-rose {
+        font-size: 25px;
     }
 }
