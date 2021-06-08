@@ -11,7 +11,7 @@ calculateSumButton.addEventListener('click', function () {
     textSumOutput.innerHTML = '&nbsp;for ' + nameBurger.value;
     nameBurger.style.fontWeight = 'bold';
     nameBurger.style.fontSize = '25px';
-    } else {   // for reset, after first click and then empty input
+    } else {   // for reset, after first click, if then the user deletes the name
         textSumOutput.innerHTML = '';
         nameBurger.style.fontWeight = '400';
         nameBurger.style.fontSize = '15px';
@@ -38,7 +38,7 @@ calculateSumButton.addEventListener('click', function () {
     var discountList10 = ['disco10', 'anni10', 'pappa10', 'fame10'];
     var discount10 = 0.9;   
     
-    var discount = 1;    
+    var discount = 1;  // it will change only if there is a discount
     var flagDiscount = false;
 
 
@@ -56,13 +56,13 @@ calculateSumButton.addEventListener('click', function () {
         }
     }
     
-    // calcolate the discount for the burger OLD VERSION but it works too
-
+    // calcolate the discount for the burger 
+    // OLD VERSION but it works too
     var firstOrder = 'firstorder';
     var firstOrderValue = 0.5;
 
     var ottavioOrder = 'Ottavio';
-    var ottavioOrderValue = 0; // free for Boss
+    var ottavioOrderValue = 0; // free for the Boss
 
     if (calcolateDiscount.value === firstOrder) {
         discount = firstOrderValue;
