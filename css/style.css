@@ -78,17 +78,21 @@ footer .bg-rose {
 .bg-rose div:first-child {
     margin-left: 15px;
 }
+.bg-rose div:last-child {
+    margin-right: 15px;
+} 
 
 @media screen and (min-width: 576px) {
     input#discount {
         width: 70%;
     }
     footer .bg-rose {
-        font-size: 25px;
-       
+        font-size: 25px;       
     }
-
     .bg-rose div:first-child {
         margin-left: 30px;
     }
+    .bg-rose div:last-child {
+        margin-right: 30px;
+    } 
 }
