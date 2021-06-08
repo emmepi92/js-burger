@@ -55,7 +55,24 @@ calculateSumButton.addEventListener('click', function () {
             flagDiscount = true;
         }
     }
+    
+    // calcolate the discount for the burger OLD VERSION but it works too
 
+    var firstOrder = 'firstorder';
+    var firstOrderValue = 0.5;
+
+    var ottavioOrder = 'Ottavio';
+    var ottavioOrderValue = 0; // free for Boss
+
+    if (calcolateDiscount.value === firstOrder) {
+        discount = firstOrderValue;
+        flagDiscount = true;
+    }
+    else if (calcolateDiscount.value === ottavioOrder) {
+        discount = ottavioOrderValue;
+        flagDiscount = true;
+    }
+    
     if (calcolateDiscount.value.length > 0 && flagDiscount === false) {
         alert("Invalid coupon");
         calcolateDiscount.value = ''; // reset on click only if the coupon is invalid
@@ -64,26 +81,6 @@ calculateSumButton.addEventListener('click', function () {
     resultSum *= discount;
 
     sumOutputHtml.innerHTML = ' $ ' +  resultSum.toFixed(2);
-
-
-    /*----------------------------------------------------
-    calcolate the discount for the burger OLD VERSION
-
-    var firstOrder = 'firstorder';
-    var firstOrderValue = 0.5;
-
-    var secondOrder = 'secondorder';
-    var secondOrderValue = 0.8;
-
-    if (calcolateDiscount.value === firstOrder) {
-        discount = firstOrderValue;
-    }
-    else if (calcolateDiscount.value === secondOrder) {
-        discount = secondOrderValue;
-    }
-
-    resultSum *= discount;
-    -----------------------------------------------*/
 });
 
 
