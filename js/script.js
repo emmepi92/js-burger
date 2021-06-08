@@ -76,12 +76,14 @@ calculateSumButton.addEventListener('click', function () {
     var secondOrderValue = 0.8;
 
     if (calcolateDiscount.value === firstOrder) {
-        resultSum *= firstOrderValue;
+        discount = firstOrderValue;
     }
     else if (calcolateDiscount.value === secondOrder) {
-        resultSum *= secondOrderValue;
+        discount = secondOrderValue;
     }
----------------------------------------------------*/
+
+    resultSum *= discount;
+    -----------------------------------------------*/
 });
 
 
