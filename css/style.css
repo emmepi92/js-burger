@@ -19,6 +19,9 @@ body {
 .burger-name {
     padding: 30px;
 }
+.burger-name input {
+    width: 100%;
+}
 input {
     border: none;
 }

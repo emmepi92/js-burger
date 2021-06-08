@@ -1,4 +1,3 @@
-// discount firstorder & secondorder 
 var calculateSumButton = document.getElementById("calculate-sum");
 
 calculateSumButton.addEventListener('click', function () {
