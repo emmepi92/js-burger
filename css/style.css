@@ -65,15 +65,15 @@ input#discount {
 
 footer .bg-rose {
     background-color: rgb(250, 94, 124);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: white;
     font-size: 18px;
     font-weight: 700;
 }
 
 .bg-rose div:first-child {
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 @media screen and (min-width: 576px) {
@@ -82,5 +82,10 @@ footer .bg-rose {
     }
     footer .bg-rose {
         font-size: 25px;
+       
+    }
+
+    .bg-rose div:first-child {
+        margin-left: 30px;
     }
 }
